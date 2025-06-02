@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólió – Név</title>
+  <style>
+    :root {
+      --main-color: #4ade80;
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --accent-color: #38bdf8;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: #020617cc;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--main-color);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--main-color);
+    }
+
+    section {
+      padding: 6rem 2rem 4rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      background-color: var(--main-color);
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .btn:hover {
+      background-color: #22c55e;
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .project.visible {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .socials h2 {
+      margin-bottom: 1rem;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .icons a {
+      color: var(--text-color);
+      font-size: 2rem;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .icons a:hover {
+      color: var(--main-color);
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0f172a;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* Animációk */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <!-- Ikonok: Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Portfólió</h1>
+    <nav>
+      <a href="#about">Rólam</a>
+      <a href="#projects">Projektek</a>
+      <a href="#socials">Elérhetőség</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Szia, [Neved] vagyok</h2>
+    <p>Frontend fejlesztő és UI/UX tervező, aki modern, reszponzív weboldalakat készít kreatív megoldásokkal.</p>
+    <a href="#socials"><button class="btn">Kapcsolat</button></a>
+  </section>
+
+  <section id="about">
+    <h2>Rólam</h2>
+    <p>Tapasztalt fejlesztőként szenvedélyem a letisztult dizájn és a hatékony kódolás. Több mint 5 éve készítek weboldalakat különböző technológiákkal, főként HTML, CSS, JavaScript és React segítségével.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projektek</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Projekt 1</h3>
+        <p>Interaktív portfólió React-tel és animációkkal.</p>
+      </div>
+      <div class="project">
+        <h3>Projekt 2</h3>
+        <p>Landing oldal modern dizájnnal és reszponzív kialakítással.</p>
+      </div>
+      <div class="project">
+        <h3>Projekt 3</h3>
+        <p>E-kereskedelmi weboldal kosár és fizetés funkcióval.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="socials" class="socials">
+    <h2>Elérhetőség</h2>
+    <div class="icons">
+      <a href="https://github.com/felhasznalonev" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/felhasznalonev" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:email@valami.hu" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://twitter.com/felhasznalonev" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 [Neved]. Minden jog fenntartva.
+  </footer>
+
+  <script>
+    // Gördülés alapú animáció megjelenéshez
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section, .project').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
