@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --gradient-bg: linear-gradient(180deg, rgba(0, 0, 0, 1) 60%, rgba(92, 9, 88, 1) 100%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--gradient-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
