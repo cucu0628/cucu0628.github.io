@@ -10,6 +10,7 @@
   "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
 },
+"home":"cucu0628.github.io",
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
