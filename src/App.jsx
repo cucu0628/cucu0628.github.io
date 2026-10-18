@@ -1,47 +1,45 @@
-import './App.css'
-import Card from "./comp/card.jsx"
-import Navbar from './comp/nav.jsx'
-import Top from './comp/top.jsx'
+import { useEffect, useState } from 'react'
+import Bar from './components/Bar.jsx'
+import Hero from './components/Hero.jsx'
+import Exhibits from './components/Exhibits.jsx'
+import Archive from './components/Archive.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
+import { SECTIONS } from './data.js'
+import { useRepos } from './useRepos.js'
 
-function App() {
+function useActiveSection() {
+  const [active, setActive] = useState(SECTIONS[0].id)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id)
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    for (const { id } of SECTIONS) {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    }
+    return () => observer.disconnect()
+  }, [])
+  return active
+}
 
+export default function App() {
+  const { repos, live } = useRepos()
+  const active = useActiveSection()
 
   return (
     <>
-     <Navbar />
-      <Top />
-      <div
-        className="mt-4 py-6 overflow-x-auto md:overflow-visible scroll-smooth"
-        id="scroll-container"
-      >
-        <div className="flex gap-4 w-max md:w-full md:justify-center px-4 " id='pro'>
-          <Card
-            title="Quiz"
-            description="AI Quiz generator. Groq api key required."
-            image="quiz.jpg"
-            site='/eretsegi'
-          />
-          <Card
-            title="Projekt 2"
-            description="Comming soon"
-            image="https://placehold.co/600x400.png"
-          />
-          <Card
-            title="Projekt 3"
-            description="Comming soon"
-            image="https://placehold.co/600x400.png"
-          />
-          <Card
-            title="Projekt 4"
-            description="Comming soon"
-            image="https://placehold.co/600x400.png"
-          />
-        </div>
-      </div>
-
-
+      <Bar active={active} />
+      <main>
+        <Hero repos={repos} />
+        <Exhibits repos={repos} />
+        <Archive repos={repos} live={live} />
+        <About />
+        <Contact />
+      </main>
     </>
   )
 }
-
-export default App

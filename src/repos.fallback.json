@@ -1,0 +1,175 @@
+[
+ {
+  "name": "slopfall",
+  "description": "Nightfall Survivors – browser survivor roguelite (Vampire Survivors-like), playable at https://cucu0628.github.io/slopfall/",
+  "language": "TypeScript",
+  "stargazers_count": 0,
+  "pushed_at": "2026-10-18T14:16:56Z",
+  "html_url": "https://github.com/cucu0628/slopfall",
+  "homepage": "https://game.asked.hu/",
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "Hibiki",
+  "description": null,
+  "language": "C++",
+  "stargazers_count": 0,
+  "pushed_at": "2026-09-24T16:04:08Z",
+  "html_url": "https://github.com/cucu0628/Hibiki",
+  "homepage": "",
+  "topics": [
+   "portfolio"
+  ],
+  "fork": false
+ },
+ {
+  "name": "cucu0628",
+  "description": "My rep",
+  "language": null,
+  "stargazers_count": 0,
+  "pushed_at": "2026-09-24T15:34:46Z",
+  "html_url": "https://github.com/cucu0628/cucu0628",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "vellum_shell",
+  "description": null,
+  "language": "QML",
+  "stargazers_count": 1,
+  "pushed_at": "2026-09-15T14:39:45Z",
+  "html_url": "https://github.com/cucu0628/vellum_shell",
+  "homepage": "",
+  "topics": [
+   "portfolio"
+  ],
+  "fork": false
+ },
+ {
+  "name": "varnished-horizon",
+  "description": "A warm, painterly dark theme for Omarchy",
+  "language": null,
+  "stargazers_count": 0,
+  "pushed_at": "2026-08-28T09:14:53Z",
+  "html_url": "https://github.com/cucu0628/varnished-horizon",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "omarchy-deskmate",
+  "description": "An animated desktop companion for the Omarchy shell — walks, reacts to failed commands, mirrors your AI agent, and drags between monitors.",
+  "language": "QML",
+  "stargazers_count": 3,
+  "pushed_at": "2026-08-21T14:41:19Z",
+  "html_url": "https://github.com/cucu0628/omarchy-deskmate",
+  "homepage": null,
+  "topics": [
+   "desktop-pet",
+   "hyprland",
+   "linux",
+   "omarchy",
+   "quickshell",
+   "wayland"
+  ],
+  "fork": false
+ },
+ {
+  "name": "omarchy-betterlockscreen",
+  "description": "A polished multi-monitor lock screen plugin for Omarchy",
+  "language": "QML",
+  "stargazers_count": 0,
+  "pushed_at": "2026-08-16T13:42:43Z",
+  "html_url": "https://github.com/cucu0628/omarchy-betterlockscreen",
+  "homepage": "",
+  "topics": [
+   "hyprland",
+   "lockscreen",
+   "omarchy",
+   "portfolio",
+   "quickshell"
+  ],
+  "fork": false
+ },
+ {
+  "name": "omarchy-dashboard",
+  "description": null,
+  "language": "QML",
+  "stargazers_count": 2,
+  "pushed_at": "2026-08-16T08:27:51Z",
+  "html_url": "https://github.com/cucu0628/omarchy-dashboard",
+  "homepage": "",
+  "topics": [
+   "portfolio"
+  ],
+  "fork": false
+ },
+ {
+  "name": "tetelek",
+  "description": null,
+  "language": "HTML",
+  "stargazers_count": 0,
+  "pushed_at": "2026-06-11T12:28:34Z",
+  "html_url": "https://github.com/cucu0628/tetelek",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "omarchy",
+  "description": "Beautiful, Modern & Opinionated Linux",
+  "language": null,
+  "stargazers_count": 0,
+  "pushed_at": "2026-05-28T09:43:04Z",
+  "html_url": "https://github.com/cucu0628/omarchy",
+  "homepage": "https://omarchy.org",
+  "topics": [],
+  "fork": true
+ },
+ {
+  "name": "cucu0628.github.io",
+  "description": null,
+  "language": "JavaScript",
+  "stargazers_count": 0,
+  "pushed_at": "2025-12-12T12:57:43Z",
+  "html_url": "https://github.com/cucu0628/cucu0628.github.io",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "eretsegi",
+  "description": null,
+  "language": "TypeScript",
+  "stargazers_count": 0,
+  "pushed_at": "2025-10-27T12:41:50Z",
+  "html_url": "https://github.com/cucu0628/eretsegi",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "mozi",
+  "description": "Mozi",
+  "language": "Python",
+  "stargazers_count": 0,
+  "pushed_at": "2025-05-22T13:38:40Z",
+  "html_url": "https://github.com/cucu0628/mozi",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "py_calculator",
+  "description": "Egy számológép amit csináltam nagyon sok idő alatt",
+  "language": "Python",
+  "stargazers_count": 0,
+  "pushed_at": "2024-11-15T11:51:28Z",
+  "html_url": "https://github.com/cucu0628/py_calculator",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ }
+]

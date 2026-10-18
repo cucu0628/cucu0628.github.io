@@ -1,12 +1,26 @@
-# React + Vite
+# cucu0628.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Asked portfóliója — React + Vite. Élesben: https://cucu0628.github.io
 
-Currently, two official plugins are available:
+- **Projektek** – kézzel válogatott projektek (`src/data.js` → `EXHIBITS`), képek a `public/shots/` mappában.
+- **Repók** – minden publikus repó élőben a GitHub API-ból. Ha az API nem válaszol
+  (pl. rate limit), a `src/repos.fallback.json` pillanatképet mutatja.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Színek a [Varnished Horizon](https://github.com/cucu0628/varnished-horizon) témából,
+a hero festményei is onnan valók (`public/paintings/`, közkincs; lista: `PAINTINGS` a `src/data.js`-ben).
 
-## Expanding the ESLint configuration
+## Fejlesztés
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev      # helyi szerver
+npm run build    # production build a dist/ mappába
+npm run deploy   # build + feltöltés a gh-pages ágra
+```
+
+Új kiemelt projekt: tegyél egy képet a `public/shots/` mappába, és adj hozzá egy elemet az
+`EXHIBITS` listához. A pillanatkép frissítése:
+
+```bash
+gh api "users/cucu0628/repos?per_page=100&sort=pushed" > src/repos.fallback.json
+```
