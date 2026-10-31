@@ -3,11 +3,11 @@ import { GITHUB_USER, LANG_COLORS, LIVE_LINKS, REPO_NOTES } from '../data.js'
 import { timeAgo } from '../useRepos.js'
 import SectionHead from './SectionHead.jsx'
 
-const ALL = 'mind'
+const ALL = 'all'
 const SORTS = {
-  friss: (a, b) => b.pushed_at.localeCompare(a.pushed_at),
-  csillag: (a, b) => b.stargazers_count - a.stargazers_count || SORTS.friss(a, b),
-  'a–z': (a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }),
+  recent: (a, b) => b.pushed_at.localeCompare(a.pushed_at),
+  stars: (a, b) => b.stargazers_count - a.stargazers_count || SORTS.recent(a, b),
+  'a–z': (a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }),
 }
 
 function Lang({ name }) {
@@ -22,7 +22,7 @@ function Lang({ name }) {
 
 export default function Archive({ repos, live }) {
   const [lang, setLang] = useState(ALL)
-  const [sort, setSort] = useState('friss')
+  const [sort, setSort] = useState('recent')
 
   const languages = useMemo(() => {
     const counts = {}
@@ -35,13 +35,13 @@ export default function Archive({ repos, live }) {
     .sort(SORTS[sort])
 
   return (
-    <section id="repok" className="section wrap">
-      <SectionHead ws={3} title="Repók">
-        Az összes publikus repóm, élőben a GitHubról.
+    <section id="repos" className="section wrap">
+      <SectionHead ws={3} title="Repos">
+        Every public repo of mine, live from GitHub.
       </SectionHead>
 
       <div className="ledger__tools">
-        <div className="chips" role="group" aria-label="Szűrés nyelv szerint">
+        <div className="chips" role="group" aria-label="Filter by language">
           {[[ALL, repos.length], ...languages].map(([name, count]) => (
             <button
               key={name}
@@ -54,8 +54,8 @@ export default function Archive({ repos, live }) {
             </button>
           ))}
         </div>
-        <div className="chips" role="group" aria-label="Rendezés">
-          <span className="dim">rendezés:</span>
+        <div className="chips" role="group" aria-label="Sort">
+          <span className="dim">sort:</span>
           {Object.keys(SORTS).map((key) => (
             <button
               key={key}
@@ -70,14 +70,14 @@ export default function Archive({ repos, live }) {
         </div>
       </div>
 
-      <div className="ledger" role="table" aria-label="Repók">
+      <div className="ledger" role="table" aria-label="Repos">
         <div className="ledger__row ledger__row--head" role="row">
           <span role="columnheader">#</span>
-          <span role="columnheader">Név</span>
-          <span role="columnheader">Leírás</span>
-          <span role="columnheader">Nyelv</span>
+          <span role="columnheader">Name</span>
+          <span role="columnheader">Description</span>
+          <span role="columnheader">Language</span>
           <span role="columnheader">★</span>
-          <span role="columnheader">Utolsó push</span>
+          <span role="columnheader">Last push</span>
         </div>
 
         {rows.map((repo, i) => {
@@ -94,7 +94,7 @@ export default function Archive({ repos, live }) {
                 {repo.fork && <span className="tag">fork</span>}
                 {liveUrl && (
                   <a className="tag tag--live" href={liveUrl} target="_blank" rel="noreferrer">
-                    élő ↗
+                    live ↗
                   </a>
                 )}
               </span>
@@ -116,9 +116,9 @@ export default function Archive({ repos, live }) {
       </div>
 
       <p className="ledger__note dim">
-        {live ? 'Élő adat a GitHub API-ból.' : 'Mentett adat (a GitHub API most nem érhető el).'}{' '}
+        {live ? 'Live data from the GitHub API.' : 'Cached snapshot (the GitHub API is unreachable right now).'}{' '}
         <a href={`https://github.com/${GITHUB_USER}?tab=repositories`} target="_blank" rel="noreferrer">
-          GitHub profil ↗
+          GitHub profile ↗
         </a>
       </p>
     </section>

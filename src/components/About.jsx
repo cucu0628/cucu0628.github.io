@@ -2,21 +2,21 @@ import SectionHead from './SectionHead.jsx'
 
 const STACK = [
   ['Desktop', 'Hyprland, Quickshell, Omarchy'],
-  ['Nyelvek', 'QML, C++, TypeScript, Python, Rust'],
-  ['Eszközök', 'Qt 6, CMake, Vite, React, Canvas 2D'],
+  ['Languages', 'QML, C++, TypeScript, Python, Rust'],
+  ['Tools', 'Qt 6, CMake, Vite, React, Canvas 2D'],
 ]
 
 export default function About() {
   return (
-    <section id="rolam" className="section wrap">
-      <SectionHead ws={4} title="Rólam" />
+    <section id="about" className="section wrap">
+      <SectionHead ws={4} title="About" />
 
       <div className="about">
         <div className="about__body">
           <p>
-            Asked vagyok, GitHubon <span className="mono">cucu0628</span>. Főleg a saját Linuxos
-            desktopomhoz írok programokat: shellt, Omarchy-pluginokat, zenelejátszót. Mellette
-            játékot is fejlesztek.
+            I'm Asked, <span className="mono">cucu0628</span> on GitHub. I mostly write software for
+            my own Linux desktop: a shell, Omarchy plugins, a music player. On the side I make
+            games.
           </p>
         </div>
 

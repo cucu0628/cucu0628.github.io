@@ -2,23 +2,23 @@ export const GITHUB_USER = 'cucu0628'
 
 // The sections double as "workspaces" in the top bar, like Hyprland's 1–5.
 export const SECTIONS = [
-  { id: 'kezdo', label: 'kezdő' },
-  { id: 'projektek', label: 'projektek' },
-  { id: 'repok', label: 'repók' },
-  { id: 'rolam', label: 'rólam' },
-  { id: 'kapcsolat', label: 'kapcsolat' },
+  { id: 'home', label: 'home' },
+  { id: 'projects', label: 'projects' },
+  { id: 'repos', label: 'repos' },
+  { id: 'about', label: 'about' },
+  { id: 'contact', label: 'contact' },
 ]
 
 // Hero backgrounds: the darker Varnished Horizon wallpapers (all public domain).
 // `focus` is the background-position that keeps the subject in frame.
 export const PAINTINGS = [
-  { file: 'twilight', artist: 'Frederic Edwin Church', title: 'Alkonyat a vadonban', year: '1860', focus: 'center 30%' },
-  { file: 'storm-rockies', artist: 'Albert Bierstadt', title: 'Vihar a Sziklás-hegységben', year: '1866', focus: 'center 40%' },
-  { file: 'abbey-oakwood', artist: 'Caspar David Friedrich', title: 'Apátság a tölgyesben', year: '1809–1810', focus: 'center 45%' },
-  { file: 'aurora', artist: 'Frederic Edwin Church', title: 'Sarki fény', year: '1865', focus: 'center 35%' },
-  { file: 'dresden-moonlight', artist: 'Johan Christian Dahl', title: 'Drezda holdfényben', year: '1839', focus: 'center 40%' },
-  { file: 'desolation', artist: 'Thomas Cole', title: 'A birodalom útja: Pusztulás', year: '1836', focus: 'center 35%' },
-  { file: 'savage-state', artist: 'Thomas Cole', title: 'A birodalom útja: A vad állapot', year: '1834', focus: 'center 40%' },
+  { file: 'twilight', artist: 'Frederic Edwin Church', title: 'Twilight in the Wilderness', year: '1860', focus: 'center 30%' },
+  { file: 'storm-rockies', artist: 'Albert Bierstadt', title: 'A Storm in the Rocky Mountains', year: '1866', focus: 'center 40%' },
+  { file: 'abbey-oakwood', artist: 'Caspar David Friedrich', title: 'The Abbey in the Oakwood', year: '1809–1810', focus: 'center 45%' },
+  { file: 'aurora', artist: 'Frederic Edwin Church', title: 'Aurora Borealis', year: '1865', focus: 'center 35%' },
+  { file: 'dresden-moonlight', artist: 'Johan Christian Dahl', title: 'Dresden by Moonlight', year: '1839', focus: 'center 40%' },
+  { file: 'desolation', artist: 'Thomas Cole', title: 'The Course of Empire: Desolation', year: '1836', focus: 'center 35%' },
+  { file: 'savage-state', artist: 'Thomas Cole', title: 'The Course of Empire: The Savage State', year: '1834', focus: 'center 40%' },
 ]
 
 // Hand-picked exhibits. `repo` links them to live GitHub data (stars, last push).
@@ -29,9 +29,9 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'TypeScript · Canvas 2D',
     image: '/shots/slopfall.webp',
-    alt: 'Nightfall Survivors játékmenet: a lovag denevérek és zombik között egy temetőben',
-    text: 'Böngészős survivor roguelite (Vampire Survivors-szerű). 6 hős, 10 fegyver evolúciókkal, bossok, mobilos irányítás. A grafika teljesen procedurális, Canvas 2D-ben.',
-    live: { href: 'https://game.asked.hu', label: 'Játék' },
+    alt: 'Nightfall Survivors gameplay: the knight surrounded by bats and zombies in a graveyard',
+    text: 'A browser survivor roguelite in the vein of Vampire Survivors. 6 heroes, 10 weapons with evolutions, bosses and touch controls. All the art is procedural, drawn in Canvas 2D.',
+    live: { href: 'https://game.asked.hu', label: 'Play' },
     size: 'hero',
   },
   {
@@ -40,9 +40,9 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'TypeScript · React · Canvas 2D',
     image: '/shots/deep-debt.webp',
-    alt: 'Deep Debt: a pixeles bányászváros a bányával, piaccal, szalonnal és a Company bankjával',
-    text: 'Pixel-art bányász roguelite idle elemekkel. Láncreakciók, napi tárnák mutátorokkal, egyre nagyobb adósság és rebirth. Böngészőben fut, opcionális jutalmazott reklámokkal.',
-    live: { href: 'https://miner.asked.hu', label: 'Játék' },
+    alt: 'Deep Debt: the pixel-art mining town with the mine, market, saloon and the Company bank',
+    text: 'A pixel-art mining roguelite with idle elements. Chain reactions, daily shafts with mutators, ever-growing debt and rebirths. Runs in the browser, with optional rewarded ads.',
+    live: { href: 'https://miner.asked.hu', label: 'Play' },
     size: 'hero flip',
   },
   {
@@ -51,8 +51,8 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'QML · Rust · Hyprland',
     image: '/shots/vellum.webp',
-    alt: 'A Vellum Shell dashboardja naptárral, időjárással és rendszerterheléssel, egy esős versenypályás háttérképen',
-    text: 'Desktop shell Hyprlandhez, Quickshellben írva. Bar, alkalmazásindító, értesítésközpont, médiavezérlés, beállítások és témaszerkesztő.',
+    alt: 'The Vellum Shell dashboard with calendar, weather and system load over a rainy race-track wallpaper',
+    text: 'A desktop shell for Hyprland, written in Quickshell. Bar, app launcher, notification center, media controls, settings and a theme editor.',
     size: 'wide',
   },
   {
@@ -61,8 +61,8 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'C++ · Qt 6 · QML',
     image: '/shots/hibiki.webp',
-    alt: 'A Hibiki zenelejátszó könyvtár nézete',
-    text: 'Qt 6 zenelejátszó Linuxra. YouTube-ról tölt le Opus formátumban, helyi könyvtár borítókkal, MPRIS és Discord Rich Presence. A Vellum Shell témáját használja.',
+    alt: 'The library view of the Hibiki music player',
+    text: 'A Qt 6 music player for Linux. Downloads from YouTube as Opus, local library with cover art, MPRIS and Discord Rich Presence. Uses the Vellum Shell theme.',
     size: 'narrow',
   },
   {
@@ -71,9 +71,9 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'QML · Quickshell · Wayland',
     image: '/shots/deskmate.webp',
-    alt: 'Deskmate az asztalon, a jobb klikkes menüvel és a beállítások panellel',
+    alt: 'Deskmate on the desktop, with its right-click menu and settings panel',
     focus: 'center bottom',
-    text: 'Animált asztali karakter Omarchyhoz. Sétál a képernyő alján, reagál a kattintásra és a hibás parancsokra, és át lehet húzni másik monitorra.',
+    text: 'An animated desktop companion for Omarchy. Walks along the bottom of the screen, reacts to clicks and failed commands, and can be dragged to another monitor.',
     size: 'narrow',
   },
   {
@@ -82,39 +82,39 @@ export const EXHIBITS = [
     year: '2026',
     medium: 'QML · MPRIS · Open-Meteo',
     image: '/shots/dashboard.webp',
-    alt: 'Az Asked Dashboard áttekintő nézete naptárral, lejátszóval és rendszerterheléssel',
-    text: 'Bar-widget az Omarchy shellhez. Az órára kattintva naptár, médialejátszó, rendszerterhelés és időjárás nézet nyílik.',
+    alt: 'The Asked Dashboard overview with calendar, media player and system load',
+    text: 'A bar widget for the Omarchy shell. Clicking the clock opens calendar, media player, system load and weather views.',
     size: 'wide',
   },
   {
     repo: 'varnished-horizon',
     title: 'Varnished Horizon',
     year: '2026',
-    medium: 'Téma · 19. századi tájképek',
+    medium: 'Theme · 19th-century landscapes',
     image: '/shots/varnished.webp',
-    alt: 'A Varnished Horizon téma: Hibiki, btop, terminál és fájlkezelő meleg tónusokban',
-    text: 'Sötét téma Omarchyhoz, 19. századi tájképek színeivel és háttérképeivel.',
+    alt: 'The Varnished Horizon theme: Hibiki, btop, a terminal and a file manager in warm tones',
+    text: 'A dark theme for Omarchy, with colors and wallpapers taken from 19th-century landscape paintings.',
     size: 'hero',
   },
 ]
 
-// Hungarian blurbs for the archive; the API description is used when missing.
+// Short blurbs for the archive; the API description is used when missing.
 export const REPO_NOTES = {
-  slopfall: 'Nightfall Survivors, böngészős roguelite.',
-  'deep-debt': 'Deep Debt, pixeles bányász roguelite.',
-  Hibiki: 'Qt 6 zenelejátszó Linuxra, MPRIS-szel és helyi könyvtárral.',
-  cucu0628: 'A GitHub-profilom README-je.',
-  vellum_shell: 'Desktop shell Hyprlandhez (Quickshell).',
-  'varnished-horizon': 'Sötét téma Omarchyhoz.',
-  'omarchy-deskmate': 'Animált asztali karakter Omarchyhoz.',
-  'omarchy-betterlockscreen': 'Többmonitoros zárolóképernyő-plugin Omarchyhoz.',
-  'omarchy-dashboard': 'Óra és dashboard widget az Omarchy barba.',
-  tetelek: 'Érettségi tételek weboldalként.',
+  slopfall: 'Nightfall Survivors, a browser roguelite.',
+  'deep-debt': 'Deep Debt, a pixel-art mining roguelite.',
+  Hibiki: 'Qt 6 music player for Linux, with MPRIS and a local library.',
+  cucu0628: 'My GitHub profile README.',
+  vellum_shell: 'Desktop shell for Hyprland (Quickshell).',
+  'varnished-horizon': 'Dark theme for Omarchy.',
+  'omarchy-deskmate': 'Animated desktop companion for Omarchy.',
+  'omarchy-betterlockscreen': 'Multi-monitor lock screen plugin for Omarchy.',
+  'omarchy-dashboard': 'Clock and dashboard widget for the Omarchy bar.',
+  tetelek: 'Hungarian final exam (érettségi) topics as a website.',
   omarchy: 'Omarchy fork.',
-  'cucu0628.github.io': 'Ez a weboldal.',
-  eretsegi: 'AI kvízgenerátor érettségihez (Groq API).',
-  mozi: 'Mozi — Python projekt.',
-  py_calculator: 'Számológép Pythonban.',
+  'cucu0628.github.io': 'This website.',
+  eretsegi: 'AI quiz generator for the Hungarian final exams (Groq API).',
+  mozi: 'Mozi, a Python project.',
+  py_calculator: 'Calculator in Python.',
 }
 
 export const LIVE_LINKS = {

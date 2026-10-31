@@ -33,11 +33,11 @@ function Exhibit({ exhibit, index, repo }) {
           )}
           {repo && (
             <a href={repo.html_url} target="_blank" rel="noreferrer" className="btn">
-              Forrás ↗
+              Source ↗
             </a>
           )}
           {repo?.stargazers_count > 0 && (
-            <span className="placard__stars" title="GitHub csillagok">
+            <span className="placard__stars" title="GitHub stars">
               ★ {repo.stargazers_count}
             </span>
           )}
@@ -51,8 +51,8 @@ export default function Exhibits({ repos }) {
   const byName = Object.fromEntries(repos.map((r) => [r.name, r]))
 
   return (
-    <section id="projektek" className="section wrap">
-      <SectionHead ws={2} title="Projektek" />
+    <section id="projects" className="section wrap">
+      <SectionHead ws={2} title="Projects" />
 
       <div className="exhibits">
         {EXHIBITS.map((exhibit, i) => (

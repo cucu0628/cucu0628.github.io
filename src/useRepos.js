@@ -46,7 +46,7 @@ export function useRepos() {
   return state
 }
 
-const rtf = new Intl.RelativeTimeFormat('hu', { numeric: 'auto' })
+const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' })
 const STEPS = [
   ['year', 365 * 24 * 3600],
   ['month', 30 * 24 * 3600],
@@ -61,5 +61,5 @@ export function timeAgo(iso) {
   for (const [unit, size] of STEPS) {
     if (Math.abs(secs) >= size) return rtf.format(Math.round(secs / size), unit)
   }
-  return 'épp most'
+  return 'just now'
 }

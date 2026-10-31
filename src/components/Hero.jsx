@@ -44,7 +44,7 @@ export default function Hero({ repos }) {
   const painting = PAINTINGS[index]
 
   return (
-    <section id="kezdo" className="hero">
+    <section id="home" className="hero">
       {loaded.map((i) => (
         <div
           key={PAINTINGS[i].file}
@@ -59,15 +59,15 @@ export default function Hero({ repos }) {
       <div className="hero__shade" aria-hidden="true" />
 
       <div className="hero__inner wrap">
-        <p className="kicker">Portfólió</p>
+        <p className="kicker">Portfolio</p>
         <h1 className="hero__name">
           Asked<span className="hero__dot">.</span>
         </h1>
         <p className="hero__lead">
-          Linuxos desktop programokat és játékokat fejlesztek. Főleg QML, C++ és TypeScript.
+          I build Linux desktop software and games, mostly in QML, C++ and TypeScript.
         </p>
         <p className="hero__roles">
-          <span>fejlesztő</span>
+          <span>developer</span>
           <span>gamer</span>
         </p>
       </div>
@@ -77,7 +77,7 @@ export default function Hero({ repos }) {
           <dl className="hero__facts">
             {latest && (
               <div>
-                <dt>Legutóbb</dt>
+                <dt>Latest</dt>
                 <dd>
                   <a href={latest.html_url} target="_blank" rel="noreferrer">
                     {latest.name}
@@ -87,11 +87,11 @@ export default function Hero({ repos }) {
               </div>
             )}
             <div>
-              <dt>Repók</dt>
-              <dd>{own.length} publikus</dd>
+              <dt>Repos</dt>
+              <dd>{own.length} public</dd>
             </div>
             <div>
-              <dt>Nyelvek</dt>
+              <dt>Languages</dt>
               <dd>{[...languages].join(', ')}</dd>
             </div>
           </dl>
@@ -100,14 +100,14 @@ export default function Hero({ repos }) {
             <figcaption key={painting.file}>
               <strong>{painting.artist}</strong>
               <em>{painting.title}</em>, {painting.year}
-              <span>Olaj, vászon</span>
+              <span>Oil on canvas</span>
             </figcaption>
           </figure>
         </div>
       </div>
 
-      <a href="#projektek" className="hero__cue">
-        projektek <span aria-hidden="true">↓</span>
+      <a href="#projects" className="hero__cue">
+        projects <span aria-hidden="true">↓</span>
       </a>
     </section>
   )

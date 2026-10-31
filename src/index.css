@@ -19,7 +19,7 @@
   --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
 
   --gutter: clamp(16px, 4vw, 56px);
-  --bar-h: 34px;
+  --bar-h: 44px;
 
   color-scheme: dark;
 }
@@ -133,12 +133,19 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-inline: 10px;
-  background: var(--ground-deep);
-  border-bottom: 1px solid var(--line);
+  padding-inline: clamp(10px, 2vw, 22px);
+  background: linear-gradient(to bottom, rgba(18, 18, 16, 0.72), rgba(18, 18, 16, 0));
   font-family: var(--mono);
   font-size: 0.75rem;
   color: var(--ink-soft);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.bar.is-scrolled {
+  background: rgba(18, 18, 16, 0.82);
+  box-shadow: inset 0 -1px 0 var(--line);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
 }
 
 .bar a {
@@ -149,45 +156,59 @@ button {
 .bar__right {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: clamp(0.8rem, 2vw, 1.6rem);
   min-width: 0;
 }
 
 .bar__logo {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 560;
+  letter-spacing: -0.01em;
   color: var(--ink-bright);
-  padding-inline: 4px;
 }
 
+.bar__logo-rest {
+  display: none;
+}
+
+.bar__logo-dot {
+  color: var(--ochre);
+}
+
+/* The workspaces sit in one framed strip, like a shell's workspace module. */
 .bar__ws {
   display: flex;
-  gap: 2px;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   list-style: none;
+  border: 1px solid var(--line-strong);
+  background: rgba(38, 37, 34, 0.55);
 }
 
 .bar__ws a {
   display: flex;
-  gap: 0.45em;
+  gap: 0.5em;
   align-items: center;
-  height: var(--bar-h);
-  padding: 0 0.55em;
+  height: 24px;
+  padding: 0 0.6em;
   color: var(--muted);
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .bar__ws a:hover {
   color: var(--ink);
+  background: rgba(231, 223, 205, 0.05);
 }
 
 .bar__ws a.is-active {
   color: var(--ink-bright);
-  border-bottom-color: var(--ochre);
+  background: var(--raise);
+}
+
+.bar__ws a.is-active .bar__num {
+  color: var(--ochre);
 }
 
 .bar__label {
@@ -196,37 +217,46 @@ button {
 
 .bar__ws a.is-active .bar__label {
   display: inline;
-  color: var(--ink-soft);
 }
 
-.bar__clock {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+.bar__gh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  height: 26px;
+  padding: 0 0.75em;
+  border: 1px solid var(--line-strong);
   color: var(--ink);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 }
 
-.bar__dots {
-  margin-right: 0.6em;
-  padding-right: 0.6em;
-  border-right: 1px solid var(--line-strong);
-  color: var(--muted);
+.bar__gh:hover {
+  color: var(--ground-deep);
+  background: var(--ochre);
+  border-color: var(--ochre);
+}
+
+.bar__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--ochre);
+  transform: scaleX(var(--progress, 0));
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bar.is-scrolled .bar__progress {
+  opacity: 0.85;
 }
 
 @media (min-width: 1000px) {
+  .bar__logo-rest,
   .bar__label {
     display: inline;
-  }
-  .bar__ws .bar__label {
-    display: inline;
-    color: inherit;
-  }
-}
-
-@media (max-width: 640px) {
-  .bar__clock {
-    display: none;
   }
 }
 
