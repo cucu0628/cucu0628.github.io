@@ -1,9 +1,44 @@
 [
  {
+  "name": "cucu0628.github.io",
+  "description": null,
+  "language": "JavaScript",
+  "stargazers_count": 0,
+  "pushed_at": "2026-10-31T14:07:03Z",
+  "html_url": "https://github.com/cucu0628/cucu0628.github.io",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "deep-debt",
+  "description": "Pixel-art mining roguelite: dig, chain explosions, pay your debt",
+  "language": "TypeScript",
+  "stargazers_count": 0,
+  "pushed_at": "2026-10-31T13:58:13Z",
+  "html_url": "https://github.com/cucu0628/deep-debt",
+  "homepage": null,
+  "topics": [],
+  "fork": false
+ },
+ {
+  "name": "vellum_shell",
+  "description": null,
+  "language": "QML",
+  "stargazers_count": 1,
+  "pushed_at": "2026-10-31T11:18:44Z",
+  "html_url": "https://github.com/cucu0628/vellum_shell",
+  "homepage": "",
+  "topics": [
+   "portfolio"
+  ],
+  "fork": false
+ },
+ {
   "name": "slopfall",
   "description": "Nightfall Survivors – browser survivor roguelite (Vampire Survivors-like), playable at https://cucu0628.github.io/slopfall/",
   "language": "TypeScript",
-  "stargazers_count": 0,
+  "stargazers_count": 2,
   "pushed_at": "2026-10-18T14:16:56Z",
   "html_url": "https://github.com/cucu0628/slopfall",
   "homepage": "https://game.asked.hu/",
@@ -32,19 +67,6 @@
   "html_url": "https://github.com/cucu0628/cucu0628",
   "homepage": null,
   "topics": [],
-  "fork": false
- },
- {
-  "name": "vellum_shell",
-  "description": null,
-  "language": "QML",
-  "stargazers_count": 1,
-  "pushed_at": "2026-09-15T14:39:45Z",
-  "html_url": "https://github.com/cucu0628/vellum_shell",
-  "homepage": "",
-  "topics": [
-   "portfolio"
-  ],
   "fork": false
  },
  {
@@ -127,17 +149,6 @@
   "homepage": "https://omarchy.org",
   "topics": [],
   "fork": true
- },
- {
-  "name": "cucu0628.github.io",
-  "description": null,
-  "language": "JavaScript",
-  "stargazers_count": 0,
-  "pushed_at": "2025-12-12T12:57:43Z",
-  "html_url": "https://github.com/cucu0628/cucu0628.github.io",
-  "homepage": null,
-  "topics": [],
-  "fork": false
  },
  {
   "name": "eretsegi",

@@ -18,7 +18,9 @@ export default function Contact() {
           Betűk: Fraunces, IBM Plex Mono. Színek és festmények: Varnished Horizon (közkincs, 19.
           századi tájképek).
         </p>
-        <p className="dim">© {new Date().getFullYear()} Asked</p>
+        <p className="dim">
+          © {new Date().getFullYear()} Asked · <a href="/adatvedelem.html">Adatvédelem</a>
+        </p>
       </footer>
     </section>
   )

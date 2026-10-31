@@ -1,6 +1,6 @@
 # cucu0628.github.io
 
-Asked portfóliója — React + Vite. Élesben: https://cucu0628.github.io
+Asked portfóliója — React + Vite. Élesben: https://asked.hu
 
 - **Projektek** – kézzel válogatott projektek (`src/data.js` → `EXHIBITS`), képek a `public/shots/` mappában.
 - **Repók** – minden publikus repó élőben a GitHub API-ból. Ha az API nem válaszol

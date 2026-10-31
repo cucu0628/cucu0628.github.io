@@ -35,12 +35,23 @@ export const EXHIBITS = [
     size: 'hero',
   },
   {
+    repo: 'deep-debt',
+    title: 'Deep Debt',
+    year: '2026',
+    medium: 'TypeScript · React · Canvas 2D',
+    image: '/shots/deep-debt.webp',
+    alt: 'Deep Debt: a pixeles bányászváros a bányával, piaccal, szalonnal és a Company bankjával',
+    text: 'Pixel-art bányász roguelite idle elemekkel. Láncreakciók, napi tárnák mutátorokkal, egyre nagyobb adósság és rebirth. Böngészőben fut, opcionális jutalmazott reklámokkal.',
+    live: { href: 'https://miner.asked.hu', label: 'Játék' },
+    size: 'hero flip',
+  },
+  {
     repo: 'vellum_shell',
     title: 'Vellum Shell',
     year: '2026',
     medium: 'QML · Rust · Hyprland',
     image: '/shots/vellum.webp',
-    alt: 'A Vellum Shell dashboardja egy lila tóparti háttérképen',
+    alt: 'A Vellum Shell dashboardja naptárral, időjárással és rendszerterheléssel, egy esős versenypályás háttérképen',
     text: 'Desktop shell Hyprlandhez, Quickshellben írva. Bar, alkalmazásindító, értesítésközpont, médiavezérlés, beállítások és témaszerkesztő.',
     size: 'wide',
   },
@@ -83,13 +94,14 @@ export const EXHIBITS = [
     image: '/shots/varnished.webp',
     alt: 'A Varnished Horizon téma: Hibiki, btop, terminál és fájlkezelő meleg tónusokban',
     text: 'Sötét téma Omarchyhoz, 19. századi tájképek színeivel és háttérképeivel.',
-    size: 'hero flip',
+    size: 'hero',
   },
 ]
 
 // Hungarian blurbs for the archive; the API description is used when missing.
 export const REPO_NOTES = {
   slopfall: 'Nightfall Survivors, böngészős roguelite.',
+  'deep-debt': 'Deep Debt, pixeles bányász roguelite.',
   Hibiki: 'Qt 6 zenelejátszó Linuxra, MPRIS-szel és helyi könyvtárral.',
   cucu0628: 'A GitHub-profilom README-je.',
   vellum_shell: 'Desktop shell Hyprlandhez (Quickshell).',
@@ -107,8 +119,9 @@ export const REPO_NOTES = {
 
 export const LIVE_LINKS = {
   slopfall: 'https://game.asked.hu',
-  eretsegi: 'https://cucu0628.github.io/eretsegi/',
-  tetelek: 'https://cucu0628.github.io/tetelek/',
+  'deep-debt': 'https://miner.asked.hu',
+  eretsegi: 'https://asked.hu/eretsegi/',
+  tetelek: 'https://asked.hu/tetelek/',
 }
 
 export const LANG_COLORS = {
