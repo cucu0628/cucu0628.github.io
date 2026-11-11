@@ -68,11 +68,11 @@ export const EXHIBITS = [
   },
   {
     repo: 'omarchy-dashboard',
-    title: 'Asked Dashboard',
+    title: 'Dashboard',
     year: '2026',
     medium: 'QML · MPRIS · Open-Meteo',
     image: '/shots/dashboard.webp',
-    alt: 'The Asked Dashboard overview with calendar, media player and system load',
+    alt: 'The Dashboard overview with calendar, media player and system load',
     text: 'A bar widget for the Omarchy shell. Clicking the clock opens calendar, media player, system load and weather views.',
     size: 'hero flip',
   },
