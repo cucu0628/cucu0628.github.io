@@ -53,6 +53,7 @@ export const EXHIBITS = [
     image: '/shots/vellum.webp',
     alt: 'The Vellum Shell dashboard with calendar, weather and system load over a rainy race-track wallpaper',
     text: 'A desktop shell for Hyprland, written in Quickshell. Bar, app launcher, notification center, media controls, settings and a theme editor.',
+    live: { href: 'https://vellum.asked.hu', label: 'Website' },
     size: 'wide',
   },
   {
@@ -66,17 +67,6 @@ export const EXHIBITS = [
     size: 'narrow',
   },
   {
-    repo: 'omarchy-deskmate',
-    title: 'Deskmate',
-    year: '2026',
-    medium: 'QML · Quickshell · Wayland',
-    image: '/shots/deskmate.webp',
-    alt: 'Deskmate on the desktop, with its right-click menu and settings panel',
-    focus: 'center bottom',
-    text: 'An animated desktop companion for Omarchy. Walks along the bottom of the screen, reacts to clicks and failed commands, and can be dragged to another monitor.',
-    size: 'narrow',
-  },
-  {
     repo: 'omarchy-dashboard',
     title: 'Asked Dashboard',
     year: '2026',
@@ -84,7 +74,7 @@ export const EXHIBITS = [
     image: '/shots/dashboard.webp',
     alt: 'The Asked Dashboard overview with calendar, media player and system load',
     text: 'A bar widget for the Omarchy shell. Clicking the clock opens calendar, media player, system load and weather views.',
-    size: 'wide',
+    size: 'hero flip',
   },
   {
     repo: 'varnished-horizon',
@@ -120,6 +110,7 @@ export const REPO_NOTES = {
 export const LIVE_LINKS = {
   slopfall: 'https://game.asked.hu',
   'deep-debt': 'https://miner.asked.hu',
+  vellum_shell: 'https://vellum.asked.hu',
   eretsegi: 'https://asked.hu/eretsegi/',
   tetelek: 'https://asked.hu/tetelek/',
 }
