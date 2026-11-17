@@ -32,7 +32,6 @@ export const EXHIBITS = [
     alt: 'Nightfall Survivors gameplay: the knight surrounded by bats and zombies in a graveyard',
     text: 'A browser survivor roguelite in the vein of Vampire Survivors. 6 heroes, 10 weapons with evolutions, bosses and touch controls. All the art is procedural, drawn in Canvas 2D.',
     live: { href: 'https://game.asked.hu', label: 'Play' },
-    size: 'hero',
   },
   {
     repo: 'deep-debt',
@@ -43,7 +42,6 @@ export const EXHIBITS = [
     alt: 'Deep Debt: the pixel-art mining town with the mine, market, saloon and the Company bank',
     text: 'A pixel-art mining roguelite with idle elements. Chain reactions, daily shafts with mutators, ever-growing debt and rebirths. Runs in the browser, with optional rewarded ads.',
     live: { href: 'https://miner.asked.hu', label: 'Play' },
-    size: 'hero flip',
   },
   {
     repo: 'vellum_shell',
@@ -54,7 +52,6 @@ export const EXHIBITS = [
     alt: 'The Vellum Shell dashboard with calendar, weather and system load over a rainy race-track wallpaper',
     text: 'A desktop shell for Hyprland, written in Quickshell. Bar, app launcher, notification center, media controls, settings and a theme editor.',
     live: { href: 'https://vellum.asked.hu', label: 'Website' },
-    size: 'wide',
   },
   {
     repo: 'Hibiki',
@@ -64,7 +61,6 @@ export const EXHIBITS = [
     image: '/shots/hibiki.webp',
     alt: 'The library view of the Hibiki music player',
     text: 'A Qt 6 music player for Linux. Downloads from YouTube as Opus, local library with cover art, MPRIS and Discord Rich Presence. Uses the Vellum Shell theme.',
-    size: 'narrow',
   },
   {
     repo: 'omarchy-dashboard',
@@ -74,7 +70,6 @@ export const EXHIBITS = [
     image: '/shots/dashboard.webp',
     alt: 'The Dashboard overview with calendar, media player and system load',
     text: 'A bar widget for the Omarchy shell. Clicking the clock opens calendar, media player, system load and weather views.',
-    size: 'hero flip',
   },
   {
     repo: 'varnished-horizon',
@@ -84,7 +79,6 @@ export const EXHIBITS = [
     image: '/shots/varnished.webp',
     alt: 'The Varnished Horizon theme: Hibiki, btop, a terminal and a file manager in warm tones',
     text: 'A dark theme for Omarchy, with colors and wallpapers taken from 19th-century landscape paintings.',
-    size: 'hero',
   },
 ]
 

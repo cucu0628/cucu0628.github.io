@@ -40,7 +40,7 @@ export default function Archive({ repos, live }) {
         Every public repo of mine, live from GitHub.
       </SectionHead>
 
-      <div className="ledger__tools">
+      <div className="ledger__tools" data-reveal>
         <div className="chips" role="group" aria-label="Filter by language">
           {[[ALL, repos.length], ...languages].map(([name, count]) => (
             <button
@@ -70,7 +70,7 @@ export default function Archive({ repos, live }) {
         </div>
       </div>
 
-      <div className="ledger" role="table" aria-label="Repos">
+      <div className="ledger" role="table" aria-label="Repos" data-reveal>
         <div className="ledger__row ledger__row--head" role="row">
           <span role="columnheader">#</span>
           <span role="columnheader">Name</span>
@@ -80,39 +80,41 @@ export default function Archive({ repos, live }) {
           <span role="columnheader">Last push</span>
         </div>
 
-        {rows.map((repo, i) => {
-          const liveUrl = LIVE_LINKS[repo.name] ?? repo.homepage
-          return (
-            <div className="ledger__row" role="row" key={repo.name}>
-              <span role="cell" className="ledger__no">
-                {String(i + 1).padStart(3, '0')}
-              </span>
-              <span role="cell" className="ledger__name">
-                <a href={repo.html_url} target="_blank" rel="noreferrer">
-                  {repo.name}
-                </a>
-                {repo.fork && <span className="tag">fork</span>}
-                {liveUrl && (
-                  <a className="tag tag--live" href={liveUrl} target="_blank" rel="noreferrer">
-                    live ↗
+        <div className="ledger__body" role="rowgroup" key={`${lang}-${sort}`}>
+          {rows.map((repo, i) => {
+            const liveUrl = LIVE_LINKS[repo.name] ?? repo.homepage
+            return (
+              <div className="ledger__row" role="row" key={repo.name} style={{ '--i': Math.min(i, 12) }}>
+                <span role="cell" className="ledger__no">
+                  {String(i + 1).padStart(3, '0')}
+                </span>
+                <span role="cell" className="ledger__name">
+                  <a href={repo.html_url} target="_blank" rel="noreferrer">
+                    {repo.name}
                   </a>
-                )}
-              </span>
-              <span role="cell" className="ledger__desc">
-                {REPO_NOTES[repo.name] ?? repo.description ?? '—'}
-              </span>
-              <span role="cell">
-                <Lang name={repo.language} />
-              </span>
-              <span role="cell" className={`ledger__stars${repo.stargazers_count ? '' : ' is-zero'}`}>
-                {repo.stargazers_count || <span className="dim">·</span>}
-              </span>
-              <span role="cell" className="ledger__date">
-                <time dateTime={repo.pushed_at}>{timeAgo(repo.pushed_at)}</time>
-              </span>
-            </div>
-          )
-        })}
+                  {repo.fork && <span className="tag">fork</span>}
+                  {liveUrl && (
+                    <a className="tag tag--live" href={liveUrl} target="_blank" rel="noreferrer">
+                      live ↗
+                    </a>
+                  )}
+                </span>
+                <span role="cell" className="ledger__desc">
+                  {REPO_NOTES[repo.name] ?? repo.description ?? '—'}
+                </span>
+                <span role="cell">
+                  <Lang name={repo.language} />
+                </span>
+                <span role="cell" className={`ledger__stars${repo.stargazers_count ? '' : ' is-zero'}`}>
+                  {repo.stargazers_count || <span className="dim">·</span>}
+                </span>
+                <span role="cell" className="ledger__date">
+                  <time dateTime={repo.pushed_at}>{timeAgo(repo.pushed_at)}</time>
+                </span>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <p className="ledger__note dim">

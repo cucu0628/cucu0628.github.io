@@ -7,6 +7,7 @@ import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
 import { SECTIONS } from './data.js'
 import { useRepos } from './useRepos.js'
+import { useReveal } from './useReveal.js'
 
 function useActiveSection() {
   const [active, setActive] = useState(SECTIONS[0].id)
@@ -29,6 +30,7 @@ function useActiveSection() {
 export default function App() {
   const { repos, live } = useRepos()
   const active = useActiveSection()
+  useReveal()
 
   return (
     <>
@@ -37,7 +39,7 @@ export default function App() {
         <Hero repos={repos} />
         <Exhibits repos={repos} />
         <Archive repos={repos} live={live} />
-        <About />
+        <About repos={repos} />
         <Contact />
       </main>
     </>

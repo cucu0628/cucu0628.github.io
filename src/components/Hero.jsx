@@ -39,7 +39,6 @@ function usePaintings() {
 export default function Hero({ repos }) {
   const own = repos.filter((r) => !r.fork && r.name !== GITHUB_USER)
   const latest = [...own].sort((a, b) => b.pushed_at.localeCompare(a.pushed_at))[0]
-  const languages = new Set(own.map((r) => r.language).filter(Boolean))
   const { index, loaded } = usePaintings()
   const painting = PAINTINGS[index]
 
@@ -60,8 +59,15 @@ export default function Hero({ repos }) {
 
       <div className="hero__inner wrap">
         <p className="kicker">Portfolio</p>
-        <h1 className="hero__name">
-          Asked<span className="hero__dot">.</span>
+        <h1 className="hero__name" aria-label="Asked.">
+          {'Asked'.split('').map((ch, i) => (
+            <span key={i} className="hero__char" style={{ '--i': i }} aria-hidden="true">
+              {ch}
+            </span>
+          ))}
+          <span className="hero__dot" aria-hidden="true">
+            .
+          </span>
         </h1>
         <p className="hero__lead">
           I build Linux desktop software and games, mostly in QML, C++ and TypeScript.
@@ -89,10 +95,6 @@ export default function Hero({ repos }) {
             <div>
               <dt>Repos</dt>
               <dd>{own.length} public</dd>
-            </div>
-            <div>
-              <dt>Languages</dt>
-              <dd>{[...languages].join(', ')}</dd>
             </div>
           </dl>
 
