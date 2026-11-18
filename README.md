@@ -6,8 +6,13 @@ Asked portfóliója — React + Vite. Élesben: https://asked.hu
 - **Repók** – minden publikus repó élőben a GitHub API-ból. Ha az API nem válaszol
   (pl. rate limit), a `src/repos.fallback.json` pillanatképet mutatja.
 
-Színek a [Varnished Horizon](https://github.com/cucu0628/varnished-horizon) témából,
-a hero festményei is onnan valók (`public/paintings/`, közkincs; lista: `PAINTINGS` a `src/data.js`-ben).
+Az oldal egy Hyprland-asztal: a tartalom tile-olt ablakokban ül, az egér alatti ablak kapja a
+fókuszkeretet, a szekciók az 1–5 workspace-ek. Betűtípus: Recursive (casual a címekhez, mono a kódhoz).
+
+Színek a [Varnished Horizon](https://github.com/cucu0628/varnished-horizon) témából, a háttérképek
+is onnan valók (`public/paintings/`, közkincs; lista: `PAINTINGS` a `src/data.js`-ben). A barban
+lehet váltani köztük; az átmenet a Vellum Shell tus-shadere (`wallpaper-ink.frag`), WebGL-re
+portolva a `src/inkTransition.js`-ben. A választást a böngésző megjegyzi.
 
 ## Fejlesztés
 

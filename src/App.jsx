@@ -1,46 +1,30 @@
-import { useEffect, useState } from 'react'
 import Bar from './components/Bar.jsx'
+import Wallpaper from './components/Wallpaper.jsx'
 import Hero from './components/Hero.jsx'
 import Exhibits from './components/Exhibits.jsx'
 import Archive from './components/Archive.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
-import { SECTIONS } from './data.js'
 import { useRepos } from './useRepos.js'
-import { useReveal } from './useReveal.js'
-
-function useActiveSection() {
-  const [active, setActive] = useState(SECTIONS[0].id)
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id)
-      },
-      { rootMargin: '-45% 0px -50% 0px' },
-    )
-    for (const { id } of SECTIONS) {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    }
-    return () => observer.disconnect()
-  }, [])
-  return active
-}
+import { useActiveWorkspace, useWallpaper, useWindowFocus, useWindowPopin } from './useDesktop.js'
 
 export default function App() {
   const { repos, live } = useRepos()
-  const active = useActiveSection()
-  useReveal()
+  const wallpaper = useWallpaper()
+  const active = useActiveWorkspace()
+  const title = useWindowFocus()
+  useWindowPopin()
 
   return (
     <>
-      <Bar active={active} />
-      <main>
+      <Wallpaper index={wallpaper.index} transition={wallpaper.transition} onDone={wallpaper.done} />
+      <Bar active={active} title={title} painting={wallpaper.painting} onWallpaper={wallpaper.next} />
+      <main className="desktop">
         <Hero repos={repos} />
         <Exhibits repos={repos} />
         <Archive repos={repos} live={live} />
-        <About repos={repos} />
-        <Contact />
+        <About repos={repos} painting={wallpaper.painting} />
+        <Contact painting={wallpaper.painting} />
       </main>
     </>
   )
